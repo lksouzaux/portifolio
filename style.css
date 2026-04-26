@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+body{
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    position: relative;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover{ /* quando o mouse passa por cima e da um efeito no texto */
+    color: aqua;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(portifolio/img.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /*quando é para colocar o texto no centro esquerdo */
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    
+    max-width: 600px;
+}
+
+.home-content h3{
+
+    font-size: 32px;
+    font-weight: 700;
+    /*animação bem vindos e eu sou abaixo */
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    
+
+}
+
+.home-content h3 span{
+    color: #ffffff;
+}
+
+.home-content h3:nth-of-type(2){
+
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+
+.home-content h1{
+
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.home-content p{
+
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #dc64ee;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #dc64ee;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    /*animação para emojis das redes sociais abaixo*/
+    transition: .5 ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    
+}
+
+.home-sci a:hover{
+    background: #dc64ee;
+    color: #ffffff;
+    box-shadow: 0 0 20px #dc64ee;
+}
+
+
+.btn-box{
+
+    display: inline-block;
+    padding: 12px 28px;
+    background: #46114e;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop .1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #dc64ee, 0 0 25px #dc64ee;
+
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 5px #dc64ee,
+    0 0 25px #dc64ee, 0 0 50px #dc64ee,
+    0 0 100px #dc64ee, 0 0 200px #dc64ee
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*topo do site para animação*/
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*h3 para animação*/
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*animação para descrição das coisas que eu sou*/
+
+@keyframes slideLeft {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
